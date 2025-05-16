@@ -1,8 +1,16 @@
-# Welcome to your Expo app 👋
+# Sardinia Bay Horse App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A React Native mobile application for horse trail enthusiasts in South Africa. Built with Expo and React Native, this application showcases South African horse trails with a focus on the Eastern Cape region.
 
-## Get started
+## Features
+
+- Authentication with ASP.NET 8 Web API backend
+- South African localization (Celsius, kilometers, local trails)
+- Interactive trail maps
+- User profiles and activity tracking
+- Event scheduling
+
+## Getting Started
 
 1. Install dependencies
 
@@ -16,35 +24,26 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+## Development
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+This project uses Expo Router for file-based routing. The main sections include:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- Authentication screens in `/app/auth`
+- Main app tabs in `/app/(tabs)`
+- Localization constants in `/constants/Localization.ts`
 
-## Get a fresh project
+## South African Localization
 
-When you're ready, run:
+The app has been localized for South African users with:
+- Temperature displayed in Celsius
+- Distances in kilometers
+- Local South African horse trails and locations
+- South African event listings
 
-```bash
-npm run reset-project
-```
+## Authentication
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Authentication is handled through an ASP.NET 8 Web API backend, with features including:
+- Login/Register
+- Two-factor authentication
+- Password reset
+- Google sign-in
