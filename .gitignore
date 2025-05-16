@@ -9,6 +9,50 @@ dist/
 web-build/
 expo-env.d.ts
 
+# Android
+android/app/build/
+android/build/
+android/.gradle/
+android/app/src/main/assets/app.manifest
+
+# iOS
+ios/build/
+ios/Pods/
+*.xcscheme
+
+# Metro Bundler
+.metro-cache/
+
+# Jest
+coverage/
+
+# IDE specific
+.idea/
+*.iml
+*.vs/
+*.vscode/
+
+# Build artifacts
+# dist/ # Already covered by Expo section
+# build/ # Covered by Android/iOS sections
+
+# Environment variables
+.env
+.env.*
+!/.env.example
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+*.tmp
+*.patch
+*.swp
+
+# macOS
+.DS_Store
+
 # Native
 .kotlin/
 *.orig.*
@@ -26,14 +70,11 @@ npm-debug.*
 yarn-debug.*
 yarn-error.*
 
-# macOS
-.DS_Store
-*.pem
-
 # local env files
 .env*.local
 
 # typescript
 *.tsbuildinfo
 
+# Example app if any
 app-example

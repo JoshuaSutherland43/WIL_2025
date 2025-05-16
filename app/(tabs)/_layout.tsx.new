@@ -2,10 +2,6 @@
  * Tabs Layout
  * Main navigation layout for authenticated users
  * Includes authentication protection and tab navigation
- * 
- * TODO: Update navigation flow after removing explore tab
- * TODO: Consider redistributing explore functionality to other tabs
- * TODO: Implement deep linking for South African trail specific URLs
  */
 
 import { Redirect, Tabs } from 'expo-router';
@@ -32,11 +28,10 @@ export default function TabLayout() {
     );
   }
 
-  // TODO: Uncomment and test authentication redirect once backend is connected
   // Redirect to login if not authenticated
- // if (!isAuthenticated) {
-  //  return <Redirect href="/auth/login" />;
- // }
+  if (!isAuthenticated) {
+    return <Redirect href="/auth/login" />;
+  }
 
   return (
     <Tabs
@@ -62,8 +57,15 @@ export default function TabLayout() {
           ),
         }}
       />
-      {/* Removed explore tab as requested */}
-      {/* TODO: Consider adding South African specific tab (e.g., "Local Trails") */}
+      <Tabs.Screen
+        name="explore"
+        options={{
+          title: 'Explore',
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name={focused ? 'compass' : 'compass-outline'} color={color} />
+          ),
+        }}
+      />
       <Tabs.Screen
         name="dashboard"
         options={{
@@ -80,7 +82,6 @@ export default function TabLayout() {
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon name={focused ? 'map' : 'map-outline'} color={color} />
           ),
-          // TODO: Update map to focus on South African locations by default
         }}
       />
       <Tabs.Screen
