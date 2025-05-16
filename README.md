@@ -32,18 +32,3 @@ This project uses Expo Router for file-based routing. The main sections include:
 - Main app tabs in `/app/(tabs)`
 - Localization constants in `/constants/Localization.ts`
 
-## South African Localization
-
-The app has been localized for South African users with:
-- Temperature displayed in Celsius
-- Distances in kilometers
-- Local South African horse trails and locations
-- South African event listings
-
-## Authentication
-
-Authentication is handled through an ASP.NET 8 Web API backend, with features including:
-- Login/Register
-- Two-factor authentication
-- Password reset
-- Google sign-in
