@@ -34,7 +34,6 @@ This project uses Expo Router for file-based routing. The main sections include:
 
 # Unfinished Features
 
-Here's a comprehensive list of all TODOs across the codebase:
 
 ## API & Backend Integration
 - Replace localhost URL with actual production API endpoint before deployment
